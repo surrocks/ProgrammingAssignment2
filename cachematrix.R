@@ -5,7 +5,7 @@
 #cacheSolve: This function computes the inverse of the special "matrix"
 #returned by makeCacheMatrix above. If the inverse has already been 
 #calculated (and the matrix has not changed), then the cachesolve 
-should retrieve the inverse from the cache.
+#should retrieve the inverse from the cache.
 ########################################################################
 
 ## Function to create an object that has components to:
@@ -33,6 +33,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+
         i <- x$getinv()
         if(!is.null(i)) {
                 message("getting cached data")
